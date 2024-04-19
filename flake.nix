@@ -35,7 +35,8 @@
             ];
 
             # buildPhase = "tar -xzf pyexpander-2.1.2.tar.gz";
-            # installPhase = "mkdir -p $out/bin; python3 -m pip install ./pyexpander-2.1.2";
+            # installPhase = "mkdir -p $out/bin; ";
+            postFixup = "cp $out/bin/expander.py $out/bin/pyexpander";
 
             meta = {
               description = "Python library for macro expansion";
